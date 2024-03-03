@@ -2,9 +2,9 @@
 
 ## Identify a couple of examples that use AssertJ expressive methods chaining.
 
-assertThat(found).isEqualTo(alex);
-assertThat(fromDb.getEmail()).isEqualTo(emp.getEmail());
-assertThat(doesEmployeeExist).isFalse();
+    assertThat(found).isEqualTo(alex);
+    assertThat(fromDb.getEmail()).isEqualTo(emp.getEmail());
+    assertThat(doesEmployeeExist).isFalse();
 
 
 ## Identify an example in which you mock the behavior of the repository (and avoid involving a database).
