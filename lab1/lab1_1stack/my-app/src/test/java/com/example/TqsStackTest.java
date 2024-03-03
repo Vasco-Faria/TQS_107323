@@ -76,7 +76,7 @@ public class TqsStackTest
         assertEquals(0, wordStack.size());
         Assertions.assertTrue(wordStack.isEmpty());
     }
-
+    
     @Test
     @DisplayName("TEST - Popping from an empty stack does throw a NoSuchElementException")
     public void testPopEmptyStack(){
