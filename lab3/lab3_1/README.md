@@ -45,7 +45,7 @@ assertThat(doesEmployeeExist).isFalse();
 
 ## the sample project demonstrates three test strategies to assess an API (C, D and E) developed with SpringBoot. Which are the main/key differences?
 
- The test C don`t involve the usage of a database, unlike tests D and E.
- The test C use @WebMvcTest and the others tests don`t.
- Both D and E leverage @SpringBootTest.
- Test E use TestRestTemplate, and test D  use MockMVC to make integration tests.
+    The test C don`t involve the usage of a database, unlike tests D and E.
+    The test C use @WebMvcTest and the others tests don`t.
+    Both D and E leverage @SpringBootTest.
+    Test E use TestRestTemplate, and test D  use MockMVC to make integration tests.
