@@ -1,11 +1,13 @@
-##Identify a couple of examples that use AssertJ expressive methods chaining.
+# Questions
+
+## Identify a couple of examples that use AssertJ expressive methods chaining.
 
 assertThat(found).isEqualTo(alex);
 assertThat(fromDb.getEmail()).isEqualTo(emp.getEmail());
 assertThat(doesEmployeeExist).isFalse();
 
 
-##Identify an example in which you mock the behavior of the repository (and avoid involving a database).
+## Identify an example in which you mock the behavior of the repository (and avoid involving a database).
 
 @BeforeEach
     public void setUp() {
@@ -28,20 +30,20 @@ assertThat(doesEmployeeExist).isFalse();
     }
     
     
-##What is the difference between standard @Mock and @MockBean?
+## What is the difference between standard @Mock and @MockBean?
 
     @Mock is for creating mock objects in regular Java tests.
     
     @MockBean is for creating mock objects specifically in Spring tests to replace real beans with mocks.
     
 
-##What is the role of the file “application-integrationtest.properties”? In which conditions will it be used?
+## What is the role of the file “application-integrationtest.properties”? In which conditions will it be used?
 
     The file "application-integrationtest.properties" is used to provide environment-specific configuration properties for integration testing.
     It should be used on Testing Scenarios and configuration.
 
 
-##the sample project demonstrates three test strategies to assess an API (C, D and E) developed with SpringBoot. Which are the main/key differences?
+## the sample project demonstrates three test strategies to assess an API (C, D and E) developed with SpringBoot. Which are the main/key differences?
 
  The test C don`t involve the usage of a database, unlike tests D and E.
  The test C use @WebMvcTest and the others tests don`t.
