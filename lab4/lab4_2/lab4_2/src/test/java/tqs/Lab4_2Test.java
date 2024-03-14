@@ -12,11 +12,11 @@ import io.github.bonigarcia.seljup.SeleniumJupiter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 @ExtendWith(SeleniumJupiter.class)
-public class LAB42Test {
+public class Lab4_2Test {
     private ChromeDriver driver;
 
     @Test
-    public void lAB42() {
+    public void lab4_2() {
 
       WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();  
