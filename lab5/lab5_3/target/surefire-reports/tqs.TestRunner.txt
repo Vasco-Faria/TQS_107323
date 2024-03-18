@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: tqs.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.891 s <<< FAILURE! -- in tqs.TestRunner
+BlazeDemo.Booking a flight from Mexico City to Cairo -- Time elapsed: 0.839 s <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 122.0.6261.128 with binary path /usr/bin/google-chrome
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'hp-spectre-x360', ip: '192.168.0.11', os.name: 'Linux', os.arch: 'amd64', os.version: '6.5.0-25-generic', java.version: '17.0.10'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: #0 0x5bc291f484e3 <unknown>
+#1 0x5bc291c77c76 <unknown>
+#2 0x5bc291ca504a <unknown>
+#3 0x5bc291ca04a1 <unknown>
+#4 0x5bc291c9d029 <unknown>
+#5 0x5bc291cdbccc <unknown>
+#6 0x5bc291cdb47f <unknown>
+#7 0x5bc291cd2de3 <unknown>
+#8 0x5bc291ca82dd <unknown>
+#9 0x5bc291ca934e <unknown>
+#10 0x5bc291f083e4 <unknown>
+#11 0x5bc291f0c3d7 <unknown>
+#12 0x5bc291f16b20 <unknown>
+#13 0x5bc291f0d023 <unknown>
+#14 0x5bc291edb1aa <unknown>
+#15 0x5bc291f316b8 <unknown>
+#16 0x5bc291f31847 <unknown>
+#17 0x5bc291f41243 <unknown>
+#18 0x72e863294ac3 <unknown>
+
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:157)
+	at tqs.FlightSteps.goToUrl(FlightSteps.java:29)
+	at ✽.I am at 'https://blazedemo.com'(classpath:tqs/blaze-demo.feature:4)
+
