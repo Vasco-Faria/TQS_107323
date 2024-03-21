@@ -1,0 +1,236 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.homepage{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+
+.Loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Assets/32472206-moderno-eletrico-onibus-em-estrada-ai-generativo-gratis-foto.jpg");
+    background-size: cover;
+    background-position: center; 
+
+}
+
+.preloader-2 {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+  }
+  
+.Loader div {
+    color: #fff;
+    margin: 5px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    position: relative;
+  }
+  
+
+  
+  .preloader-2 .line {
+    width: 1px;
+    height: 15px;
+    background: #fff;
+    margin: 0 1px;
+    display: inline-block;
+    animation: opacity-2 1000ms infinite ease-in-out;
+  }
+  
+  .preloader-1 .line-1, .preloader-2 .line-1 { animation-delay: 800ms; }
+  .preloader-1 .line-2, .preloader-2 .line-2 { animation-delay: 600ms; }
+  .preloader-1 .line-3, .preloader-2 .line-3 { animation-delay: 400ms; }
+  .preloader-1 .line-4, .preloader-2 .line-4 { animation-delay: 200ms; }
+  .preloader-1 .line-6, .preloader-2 .line-6 { animation-delay: 200ms; }
+  .preloader-1 .line-7, .preloader-2 .line-7 { animation-delay: 400ms; }
+  .preloader-1 .line-8, .preloader-2 .line-8 { animation-delay: 600ms; }
+  .preloader-1 .line-9, .preloader-2 .line-9 { animation-delay: 800ms; }
+  
+  @keyframes opacity-1 { 
+    0% { 
+      opacity: 1;
+    }
+    50% { 
+      opacity: 0;
+    }
+    100% { 
+      opacity: 1;
+    }  
+  }
+  
+  @keyframes opacity-2 { 
+    0% { 
+      opacity: 1;
+      height: 15px;
+    }
+    50% { 
+      opacity: 0;
+      height: 12px;
+    }
+    100% { 
+      opacity: 1;
+      height: 15px;
+    }  
+  }
+
+
+
+
+nav {
+    background-color: #000000;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 10px 0;
+    height: 4rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    font-size: 1.3rem;
+    position: relative; 
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; 
+    width: 0;
+    height: 4px; 
+    background-color: #c923bb;
+    transition: width 0.3s ease; 
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+
+
+.fadeIn {
+    opacity: 0; 
+    transition: opacity 1s ease;
+}
+
+.fadeIn.show {
+    opacity: 1; 
+}
+
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.homepage-space1 {
+    width: 100%;
+    height: 20%;
+}
+
+.homepage-main{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.homepage-space2 {
+    width: 100%;
+    height: 10%;
+}
+
+
+.h-left{
+    height: 100%;
+    width: 60%;
+    background-color: #2b27344c;
+    margin-left: 4rem;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.h-right{
+    height: 100%;
+    width: 30%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+.h-right img{
+    width: 80%;
+    height: auto;
+}
+
+.h-right h2{
+    color: #c923bb;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+
+
+.h-left div{
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.h-left div h2{
+    color: white;
+    font-size: 1.7rem;
+}
+
