@@ -227,10 +227,34 @@ nav a:hover::after {
     width: 90%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
 }
 
 .h-left div h2{
     color: white;
     font-size: 1.7rem;
+}
+
+
+form{
+width: 100%;
+height: 50%;
+display: flex;
+flex-direction: column;
+}
+
+
+form .titles{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titles p{
+    color: white;
+    font-size: 1.2rem;
 }
 
