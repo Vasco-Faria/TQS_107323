@@ -40,14 +40,40 @@
                         <h2>Explore</h2>
                         <form>
                             <div class="options">
-
+                                <div>
+                                <input class="opi" type="radio" id="ida" name="tipo_viagem" value="ida" onclick="toggleCalendar()" checked>
+                                <label for="ida">Only Way</label>
+                                </div>
+                                <div>
+                                <input class="opi" type="radio" id="ida_e_volta" name="tipo_viagem" value="ida_e_volta" onclick="toggleCalendar()">
+                                <label for="ida_e_volta">Round Trip</label>
+                            </div>
                             </div>
                             <div class="titles">
                                 <p>From</p>
                                 <p>To</p>
                             </div>
                             <div class="selects">
-                                
+                                <select>
+
+                                </select>
+                                <select>
+
+                                </select>
+                            </div>
+                            <div class="calendar-select">
+                                <div>
+                                <input type="date" id="start_date" name="start_date">
+                                </div>
+                                <div>
+                                <input type="date" id="end_date" name="end_date" disabled>
+                                </div>
+                            </div>
+                            <div class="button-go-search">
+                                <button>Search</button>
+                            </div>
+                            <div class="quote-homepage">
+                                <p>"Embrace the journey, for it's not just about the destination, but the adventures along the way."</p>
                             </div>
                         </form>
                     </div>
@@ -56,9 +82,6 @@
                     <img src="../Assets/bus.png" alt="Bus">
                     <h2>BusPeak</h2>
                 </div>
-            </div>
-            <div class="homepage-space2">
-                
             </div>
         </div>
 

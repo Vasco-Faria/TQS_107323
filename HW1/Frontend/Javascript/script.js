@@ -24,3 +24,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 100); 
     }
 });
+
+function toggleCalendar() {
+    var idaRadio = document.getElementById("ida");
+    var endDateInput = document.getElementById("end_date");
+    
+    if (idaRadio.checked) {
+        
+        endDateInput.disabled = true;
+    } else {
+        
+        endDateInput.disabled = false;
+    }
+}

@@ -258,3 +258,146 @@ form .titles{
     font-size: 1.2rem;
 }
 
+
+form .options{
+    display: flex;
+    width: 60%;
+    height: 4rem;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+
+.options div{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.options div label{
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.opi{
+    font-size: 5em; 
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+form .selects{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+.selects select{
+    width: 25%;
+    box-sizing: border-box;
+    height: 2rem;
+}
+
+
+form .calendar-select p{
+    color: white;
+    margin-left: 2rem;
+}
+
+form .calendar-select{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px;
+    margin-top: 2rem;
+}
+
+.calendar-select div{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-select div input{
+    height: 70%;
+}
+
+
+form .button-go-search{
+    width: 70%;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-go-search button{
+    width: 30%;
+    height: 3rem;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-go-search button:hover {
+  box-shadow: #c923bb 0 0 0 5px, transparent 0 0 0 0;
+}
+    
+
+
+
+form .quote-homepage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    
+}
+
+
+.quote-homepage p{
+    color: white;
+    letter-spacing: 0.1rem;
+
+}
+
+
+
+
