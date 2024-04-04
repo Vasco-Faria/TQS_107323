@@ -26,9 +26,9 @@
         <div class="homepage-container fadeIn" style="display: none;">
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a href="/" onclick="gotohome(event)" >Home</a></li>
+                    <li><a href="#" onclick="gotohome(event)" >Schedule</a></li>
+                    <li><a href="#" onclick="gotohome(event)" >Help</a></li>
                 </ul>
             </nav>
             <div class="homepage-space1">
@@ -38,7 +38,7 @@
                 <div class="h-left">
                     <div>
                         <h2>Explore</h2>
-                        <form>
+                        <form id="searchForm">
                             <div class="options">
                                 <div>
                                 <input class="opi" type="radio" id="ida" name="tipo_viagem" value="ida" onclick="toggleCalendar()" checked>
@@ -54,11 +54,27 @@
                                 <p>To</p>
                             </div>
                             <div class="selects">
-                                <select>
-
+                                <select id="origin" onchange="updateDestinationOptions()">
+                                    <option value="Aveiro" selected>Aveiro</option>
+                                    <option value="Barcelona">Barcelona</option>
+                                    <option value="Faro">Faro</option>
+                                    <option value="Lisboa">Lisboa</option>
+                                    <option value="Madrid">Madrid</option>
+                                    <option value="Porto">Porto</option>
+                                    <option value="Sevilha">Sevilha</option>
+                                    <option value="Valencia">Valencia</option>
+                                    <option value="Viana">Viana</option>
                                 </select>
-                                <select>
-
+                                <select id="destination" onchange="updateOriginOptions()">
+                                    <option value="Aveiro" >Aveiro</option>
+                                    <option value="Barcelona">Barcelona</option>
+                                    <option value="Faro">Faro</option>
+                                    <option value="Lisboa">Lisboa</option>
+                                    <option value="Madrid">Madrid</option>
+                                    <option value="Porto" selected>Porto</option>
+                                    <option value="Sevilha">Sevilha</option>
+                                    <option value="Valencia">Valencia</option>
+                                    <option value="Viana">Viana</option>
                                 </select>
                             </div>
                             <div class="calendar-select">
@@ -70,7 +86,7 @@
                                 </div>
                             </div>
                             <div class="button-go-search">
-                                <button>Search</button>
+                                <button onclick="createTicket()">Search</button>
                             </div>
                             <div class="quote-homepage">
                                 <p>"Embrace the journey, for it's not just about the destination, but the adventures along the way."</p>

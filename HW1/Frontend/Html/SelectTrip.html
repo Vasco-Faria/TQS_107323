@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BusPeak - select trip</title>
+    <link rel="stylesheet" href="../CSS/selectrip.css">
+    <script src="../Javascript/selecttrip.js" defer></script>
 </head>
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="/" onclick="gotohome(event)" >Home</a></li>
+            <li><a href="#" onclick="gotohome(event)" >Schedule</a></li>
+            <li><a href="#" onclick="gotohome(event)" >Help</a></li>
+        </ul>
+    </nav>
+    <div class="options-select">
+        <div class="options-title">
+            <h2 class="title-trip">
+                
+            </h2>
+        </div>
+        <div class="selections">
+            <select id="currency-select">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
+    </div>
+    <div class="selectrip-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Choose</th>
+                    <th>Trip #</th>
+                    <th>Company</th>
+                    <th>Departs</th>
+                    <th>Arrives</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>11</td>
+                    <td>BusIberia</td>
+                    <td>8:45 AM</td>
+                    <td>11:15 AM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>22</td>
+                    <td>FlixBus</td>
+                    <td>4:22 PM</td>
+                    <td>5:13 PM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>33</td>
+                    <td>Rede Expressos</td>
+                    <td>1:43 AM</td>
+                    <td>4:43 AM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>44</td>
+                    <td>BusIberia</td>
+                    <td>7:11 PM</td>
+                    <td>9:00 PM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>55</td>
+                    <td>Ovnitur</td>
+                    <td>1:57 PM</td>
+                    <td>3:12 PM</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
