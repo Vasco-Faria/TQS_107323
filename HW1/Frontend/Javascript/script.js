@@ -53,12 +53,11 @@ function updateDestinationOptions() {
     var originSelect = document.getElementById("origin");
     var destinationSelect = document.getElementById("destination");
 
-    // Habilitar todas as opções do destino
     for (var i = 0; i < destinationSelect.options.length; i++) {
         destinationSelect.options[i].disabled = false;
     }
 
-    // Desabilitar a opção selecionada no origin
+  
     var selectedIndex = originSelect.selectedIndex;
     destinationSelect.options[selectedIndex].disabled = true;
 }
@@ -67,12 +66,11 @@ function updateOriginOptions() {
     var originSelect = document.getElementById("origin");
     var destinationSelect = document.getElementById("destination");
 
-    // Habilitar todas as opções da origem
     for (var i = 0; i < originSelect.options.length; i++) {
         originSelect.options[i].disabled = false;
     }
 
-    // Desabilitar a opção selecionada no destination
+    
     var selectedIndex = destinationSelect.selectedIndex;
     originSelect.options[selectedIndex].disabled = true;
 }
@@ -134,3 +132,31 @@ function gotohome(event) {
     window.location.href = 'Homepage.html';
 }
 
+
+var today = new Date();
+var endDateLimit = new Date(today);
+endDateLimit.setDate(endDateLimit.getDate() + 5); 
+
+var startDateInput = document.getElementById("start_date");
+var endDateInput = document.getElementById("end_date");
+
+startDateInput.setAttribute("min", today.toISOString().split('T')[0]); 
+startDateInput.setAttribute("max", endDateLimit.toISOString().split('T')[0]); 
+
+startDateInput.addEventListener("change", function() {
+    if (startDateInput.value) {
+        endDateInput.setAttribute("min", startDateInput.value);
+    } else {
+        endDateInput.removeAttribute("min");
+    }
+    endDateInput.value = ""; 
+});
+
+endDateInput.addEventListener("change", function() {
+    if (endDateInput.value && startDateInput.value) {
+        if (endDateInput.value < startDateInput.value) {
+            alert("Por favor, selecione uma data posterior à data de início.");
+            endDateInput.value = "";
+        }
+    }
+});

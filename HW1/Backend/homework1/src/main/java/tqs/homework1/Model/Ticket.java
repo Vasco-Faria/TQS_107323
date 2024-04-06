@@ -4,13 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 import java.util.Date;
 
-import org.hibernate.boot.spi.AccessType;
+
 
 
 @Entity
@@ -22,12 +24,15 @@ public class Ticket {
     
     private String origin;
     private String destiny;
+
+    @Temporal(TemporalType.DATE)
     private Date date;
-    private Integer trip;
-    private String company;
-    private String departs;
-    private String arrives;
-    private String price;
+    
+    @ManyToOne
+    @JoinColumn(name = "trip_id") 
+    private Trip trip;
+
+    private String seat;
     private String name;
     private String adress;
     private String city;
@@ -42,11 +47,12 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(String origin, String destiny, Date date, Integer trip, String company, String departs, String arrives, String price, String name, String adress, String city, String state, String zipCode, String cardType, Integer creditnumber, Integer month, Integer Year, String cardName) {
+    public Ticket(String origin, String destiny, Date date,Trip trip, String name, String adress, String city, String state, String zipCode, String cardType, Integer creditnumber, Integer month, Integer Year, String cardName) {
         this.origin = origin;
         this.destiny = destiny;
         this.date = date;
     }
+    
 
 
     public Long getId() {
@@ -61,8 +67,25 @@ public class Ticket {
         return origin;
     }
 
+
     public void setOrigin(String from) {
         this.origin = from;
+    }
+
+    public Trip getTrip(){
+        return trip;
+    }
+
+    public void setTrip(Trip trip) {
+        this.trip = trip;
+    }
+
+    public String getSeat() {
+        return seat;
+    }
+
+    public void setSeat(String seat) {
+        this.seat = seat;
     }
 
     public String getDestiny() {
@@ -81,46 +104,6 @@ public class Ticket {
         this.date = date;
     }
 
-
-    public Integer getTrip() {
-        return trip;
-    }
-
-    public void setTrip(Integer trip) {
-        this.trip = trip;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public String getDeparts() {
-        return departs;
-    }
-
-    public void setDeparts(String departs) {
-        this.departs = departs;
-    }
-
-    public String getArrives() {
-        return arrives;
-    }
-
-    public void setArrives(String arrives) {
-        this.arrives = arrives;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
 
     public String getName() {
         return name;

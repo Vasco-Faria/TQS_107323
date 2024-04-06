@@ -167,14 +167,33 @@ tbody tr {
 #currency-select {
     background-color: black;
     color: white;
-    border: white;
+    border: 1px solid white;
     border-radius: 3rem;
-    padding: 20px; 
+    padding: 10px; 
     font-size: 16px;
 }
 
 #currency-select option {
     background-color: black;
     color: white;
+}
+
+#currency-select:hover{
+    cursor: pointer;
+}
+
+
+.button-select{
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    padding: 10px;
+    border-radius: 3rem;
+}
+
+
+.button-select:hover{
+    cursor: pointer;
+    border: 2px solid #c923bb;
 }
 
