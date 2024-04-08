@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusPeak - Your Tickets</title>
+    <link rel="stylesheet" href="finalpage.css">
+    <script src="finalpage.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/" onclick="gotohome(event)">Home</a></li>
+            <li><a href="#" onclick="gotohome(event)">Schedule</a></li>
+            <li><a href="#" onclick="gotohome(event)">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-finalpage">
+        <div class="title">
+            <h2 id="ticketName"></h2>
+        </div>
+        <div class="ticket-info">
+            <div class="column">
+                <p><strong>Origin:</strong> <span id="ticketOrigin"></span></p>
+                <p><strong>Destination:</strong> <span id="ticketDestination"></span></p>
+                <p><strong>Derparture Time:</strong> <span id="ticketDtime"></span></p>
+                <p><strong>Arrival Time:</strong> <span id="ticketAtime"></span></p>
+            </div>
+            <div class="column">
+                <p><strong>Date:</strong> <span id="ticketDate"></span></p>
+                <p><strong>Seat:</strong> <span id="ticketSeat"></span></p>
+                <p><strong>Trip:</strong> <span id="ticketTripId"></span></p>
+                <p><strong>Company:</strong> <span id="ticketCompany"></span></p>
+            </div>
+        </div>
+        <div class="finaljson">
+            <h3 style="margin-bottom: 10px;">JSON Ticket</h3>
+            <p id="ticketJson"></p>
+        </div>
+        <div class="finalbuttons">
+            <button onclick="gotohome(event)">Voltar à Página Inicial</button>
+            <button onclick="open()">Ver Todos os Tickets</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -129,7 +129,7 @@ function createTicket() {
 function gotohome(event) {
     event.preventDefault(); 
 
-    window.location.href = 'Homepage.html';
+    window.location.href = 'index.html';
 }
 
 

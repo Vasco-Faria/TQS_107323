@@ -10,6 +10,7 @@ import tqs.homework1.Model.Ticket;
 import tqs.homework1.Model.Trip;
 import tqs.homework1.Repository.TicketRepository;
 import tqs.homework1.Repository.TripRepository;
+import tqs.homework1.Requests.PurchaseRequest;
 
 @Service
 public class TicketService {
@@ -47,14 +48,13 @@ public class TicketService {
                 Ticket ticket = optionalTicket.get();
                 
                 if (trip.getAvailableSeats() > 0) {
-                    // Gerar assento único
+                  
                     String seat = generateUniqueSeat(trip);
                     
-                    // Atualizar número de assentos disponíveis no trip
+                    
                     trip.setAvailableSeats(trip.getAvailableSeats() - 1);
                     tripRepository.save(trip);
 
-                    // Atribuir o trip ao ticket e definir o assento
                     ticket.setTrip(trip);
                     ticket.setSeat(seat);
                     ticketRepository.save(ticket);
@@ -81,16 +81,49 @@ private String generateUniqueSeat(Trip trip) {
 }
 
 private String generateSeat() {
-    // Primeiro caractere de A a J
+   
     char row = (char) ('A' + (int) (Math.random() * 10));
-    // Segundo caractere de 1 a 4
+   
     int seatNumber = (int) (1 + Math.random() * 4);
     
     return String.format("%c%d", row, seatNumber);
 }
 
+public void purchaseTicket(PurchaseRequest request) {
+    Long ticketId = request.getTicketId();
 
-
-
-    
+    Optional<Ticket> optionalTicket = ticketRepository.findById(ticketId);
+    if (optionalTicket.isPresent()) {
+        Ticket ticket = optionalTicket.get();
+        ticket.setName(request.getName());
+        ticket.setAddress(request.getAddress());
+        ticket.setCity(request.getCity());
+        ticket.setState(request.getState());
+        ticket.setZipCode(request.getZipCode());
+        ticket.setCardType(request.getCardType());
+        ticket.setCreditnumber(request.getCreditCardNumber());
+        ticket.setMonth(request.getMonth());
+        ticket.setYear(request.getYear());
+        ticket.setCardName(request.getNameOnCard());
+        
+        ticketRepository.save(ticket);
+    } else {
+        throw new IllegalArgumentException("Ticket with ID " + ticketId + " not found.");
+    }
 }
+
+
+    public void deleteAllTickets() {
+    
+        ticketRepository.deleteAll();
+    }
+
+    public void deleteTicketById(Long ticketId) {
+        
+        ticketRepository.deleteById(ticketId);
+    }
+}
+
+
+
+

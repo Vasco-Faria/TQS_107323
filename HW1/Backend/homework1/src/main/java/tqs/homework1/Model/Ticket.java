@@ -34,20 +34,20 @@ public class Ticket {
 
     private String seat;
     private String name;
-    private String adress;
+    private String address;
     private String city;
     private String state;
     private String zipCode;
     private String cardType;
-    private Integer creditnumber;
-    private Integer month;
-    private Integer Year;
+    private String creditnumber;
+    private String  month;
+    private String  Year;
     private String cardName;
 
     public Ticket() {
     }
 
-    public Ticket(String origin, String destiny, Date date,Trip trip, String name, String adress, String city, String state, String zipCode, String cardType, Integer creditnumber, Integer month, Integer Year, String cardName) {
+    public Ticket(String origin, String destiny, Date date,Trip trip, String name, String adress, String city, String state, String zipCode, String cardType, String  creditnumber, String  month, String  Year, String cardName) {
         this.origin = origin;
         this.destiny = destiny;
         this.date = date;
@@ -113,12 +113,12 @@ public class Ticket {
         this.name = name;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
     public String getCity() {
@@ -153,27 +153,27 @@ public class Ticket {
         this.cardType = cardType;
     }
 
-    public Integer getCreditnumber() {
+    public String  getCreditnumber() {
         return creditnumber;
     }
 
-    public void setCreditnumber(Integer creditnumber) {
+    public void setCreditnumber(String  creditnumber) {
         this.creditnumber = creditnumber;
     }
 
-    public Integer getMonth() {
+    public String  getMonth() {
         return month;
     }
 
-    public void setMonth(Integer month) {
+    public void setMonth(String  month) {
         this.month = month;
     }
 
-    public Integer getYear() {
+    public String getYear() {
         return Year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(String  year) {
         Year = year;
     }
 

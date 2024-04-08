@@ -12,3 +12,11 @@ services:
         MYSQL_PASSWORD: buspeak
     ports:
         - "9906:3306"
+        
+  web:
+    image: nginx
+    volumes:
+      - ./Frontend:/usr/share/nginx/html
+    ports:
+      - "5000:80"
+
