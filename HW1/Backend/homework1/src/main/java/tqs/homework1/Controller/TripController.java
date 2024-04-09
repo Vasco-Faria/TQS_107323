@@ -35,13 +35,16 @@ public class TripController {
 
     
     @GetMapping("/trips")
-public List<Trip> getTripsByOriginAndDestination(@RequestParam String origin, 
-                                                  @RequestParam String destination, 
-                                                  @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-    Date sqlDate = java.sql.Date.valueOf(date);
-    
-    return tripService.findTripsByOriginDestinationAndDate(origin, destination, sqlDate);
-}
+    public ResponseEntity<List<Trip>> getTripsByOriginAndDestination(@RequestParam String origin, 
+                                                                      @RequestParam String destination, 
+                                                                      @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        Date sqlDate = java.sql.Date.valueOf(date);
+        List<Trip> trips = tripService.findTripsByOriginDestinationAndDate(origin, destination, sqlDate);
+        if (trips.isEmpty()) {
+            return ResponseEntity.notFound().build(); // Retorna 404 se nenhuma viagem for encontrada
+        }
+        return ResponseEntity.ok(trips);
+    }
 
     
 }

@@ -89,7 +89,7 @@ function createTicket() {
     var startDate = document.querySelector('#start_date').value;
 
     if (!origin || !destination || !startDate) {
-        alert('Por favor, preencha todos os campos.');
+        
         return; 
     }
 
@@ -111,7 +111,7 @@ function createTicket() {
         if (!response.ok) {
             throw new Error('Failed to create ticket');
         }
-        alert('Ticket created successfully!');
+        
         return response.text();
     })
     .then(id => {
@@ -121,7 +121,7 @@ function createTicket() {
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Failed to create ticket');
+        
     });
 }
 
@@ -155,7 +155,6 @@ startDateInput.addEventListener("change", function() {
 endDateInput.addEventListener("change", function() {
     if (endDateInput.value && startDateInput.value) {
         if (endDateInput.value < startDateInput.value) {
-            alert("Por favor, selecione uma data posterior à data de início.");
             endDateInput.value = "";
         }
     }

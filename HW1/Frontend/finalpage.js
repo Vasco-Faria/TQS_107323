@@ -41,3 +41,9 @@ if (ticketId) {
 } else {
     console.error('Ticket ID not found in localStorage');
 }
+
+function gotos(event){
+    event.preventDefault(); 
+
+    window.location.href = 'ticketschedule.html';
+}
