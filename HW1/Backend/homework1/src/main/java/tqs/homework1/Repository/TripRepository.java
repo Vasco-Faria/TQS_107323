@@ -14,4 +14,7 @@ public interface TripRepository extends JpaRepository<Trip, Long> {
     List<Trip> findByOriginAndDestinationAndTripDate(String origin, String destination, Date tripDate);
     Trip findById(long id);
     List<Trip> deleteByTripDateBefore(Date date);
+    List<Trip> findByTripDate(Date yesterday);
+    void deleteByTripDate(Date yesterday);
+    Trip findTopByOrderByTripDateDesc();
 }

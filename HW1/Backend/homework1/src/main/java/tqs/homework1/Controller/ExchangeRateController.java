@@ -17,6 +17,12 @@ public class ExchangeRateController {
     @Autowired
     private ExchangeRateService exchangeRateService;
 
+    @Autowired
+    public void setExchangeRateService(ExchangeRateService exchangeRateService) {
+        this.exchangeRateService = exchangeRateService;
+    }
+
+
     @GetMapping("/prices")
     public ResponseEntity<Map<String, Double>> getPrices() {
         Map<String, Double> exchangeRates = exchangeRateService.getExchangeRates();

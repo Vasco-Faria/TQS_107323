@@ -18,11 +18,14 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        java.util.Date currentDate = new java.util.Date();
 
-        for (int i = 0; i < 5; i++) {
-            java.util.Date tripDate = new java.util.Date(currentDate.getTime() + i * 24 * 60 * 60 * 1000);
-            generateTripsForDate(tripDate);
+        if (tripRepository.count() == 0) {
+            java.util.Date currentDate = new java.util.Date();
+    
+            for (int i = 0; i < 5; i++) {
+                java.util.Date tripDate = new java.util.Date(currentDate.getTime() + i * 24 * 60 * 60 * 1000);
+                generateTripsForDate(tripDate);
+            }
         }
     }
 

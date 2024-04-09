@@ -47,13 +47,18 @@ public class Ticket {
     public Ticket() {
     }
 
+    public Ticket(String origin, String destiny, Date date) {
+        this.origin=origin;
+        this.destiny=destiny;
+        this.date=date;
+    }
+
     public Ticket(String origin, String destiny, Date date,Trip trip, String name, String adress, String city, String state, String zipCode, String cardType, String  creditnumber, String  month, String  Year, String cardName) {
         this.origin = origin;
         this.destiny = destiny;
         this.date = date;
     }
     
-
 
     public Long getId() {
         return id;
