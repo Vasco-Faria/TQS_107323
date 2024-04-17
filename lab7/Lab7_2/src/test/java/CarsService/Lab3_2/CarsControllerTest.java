@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-@WebMvcTest(CarController.class)
+@WebMvcTest(CarControllerTest2.class)
 public class CarsControllerTest {
     
 
